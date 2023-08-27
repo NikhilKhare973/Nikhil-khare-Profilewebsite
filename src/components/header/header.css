@@ -1,0 +1,101 @@
+header {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    /* position: relative; */
+}
+
+
+/* ======================== CTA ==========================  */
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* ======================== HEADER SOCIALS ==========================  */
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 14rem;
+    bottom: 3rem;
+}
+
+.header__socials::after {
+    content: ' ';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+
+/* ======================== ME ==========================  */
+.me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    /* left: 50%;   same thing  
+    transform: translateX(-50%);  */
+    margin-top: 1rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+
+/* ======================== SCROLL DOWN ==========================  */
+.scroll__dowm {
+    position: relative;
+    right: -33rem;
+    bottom: -22rem;
+    transition: rotate(90deg);
+    /* transform: rotate(70deg); */
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* =========================================  MEDIA QUERIES (MEDIUM DEVICES) ============================== */
+@media screen and (max-width: 1024px) {
+   header {
+    height: 68vh;
+    margin-bottom: 22rem;
+   }
+
+   .header__socials {
+       left: 8rem;
+      bottom: 7rem; 
+   }
+
+    .scroll__dowm {
+       position: relative;
+        right: -18rem;
+        bottom: -22rem;
+        /* transition: rotate(90deg); */
+    }
+}    
+
+
+
+
+/* =========================================  MEDIA QUERIES (SMALL DEVICES) ============================== */
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+        margin-bottom: 10rem;
+    }
+
+    .header__socials, .scroll__dowm {
+        display: none;
+    }
+}
